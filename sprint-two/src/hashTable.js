@@ -1,5 +1,5 @@
-
-
+// Hash tables store key value pairs by using "hash function" that turns
+// keys into numeric numbers indices located in a memory bank.
 var HashTable = function() {
   this._limit = 8;
   this._storage = LimitedArray(this._limit);
@@ -7,6 +7,7 @@ var HashTable = function() {
 
 HashTable.prototype.insert = function(k, v) {
   var index = getIndexBelowMaxForKey(k, this._limit);
+  this._storage[index, v];
 };
 
 HashTable.prototype.retrieve = function(k) {
